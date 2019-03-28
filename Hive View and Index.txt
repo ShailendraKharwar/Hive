@@ -1,0 +1,18 @@
+ _____________________________________________________________________________________________________________________________________________________
+|                                                 Views in Hive:                                                                                      |
+|                                                                                                                                                     |
+|  A view is a virtual table based on the result-set of an SQL or HQL statement.                                                                      |
+|  A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.            |
+|  You can add SQL functions, WHERE, and JOIN statements to a view and present the data as if the data were coming from one single table.             |
+|  Syntax to create a view:                                											      |
+|																		      |
+|  CREATE VIEW view_name AS SELECT column1, column2, ... FROM table_name WHERE condition; 							      |
+|																		      |
+|																		      |
+|                                                 Index in Hive:								      		      |
+|																		      |
+|  An Index is nothing but a pointer on a particular column of a table. Creating an index means creating a pointer on a particular column of a table. |
+|  Its syntax is as follows:															      |
+| 																		      |
+|  CREATE INDEX inedx_name ON TABLE table_name(column_name) AS 'org.apache.hadoop.hive.ql.index.compact.CompactIndexHandler';			      |
+|_____________________________________________________________________________________________________________________________________________________|
