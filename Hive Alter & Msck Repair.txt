@@ -1,0 +1,11 @@
+________________________________________________________________________________________________________________________________________________________________
+|                                                    Alter and Msck:												|
+|																				|
+|   Hive stores a list of partitions for each table in its metastore. If, however, new partitions are directly added to HDFS , the metastore (and hence Hive)   |
+|   will not be aware of these partitions unless the user runs either of below ways to add the newly add partitions.						|
+|   1. ALTER TABLE table_name ADD PARTITION (partition1 data_type, partition2 data_type) LOCATION '/hdfs/location/of/the/file';					|
+|   OR																				|
+|   2. MSCK REPAIR TABLE table_name;																|
+|																				|
+|   MSCK will refresh the Hive table metadata and add new partitions to the table. But it refreshes whole table every time you run MSCK. 			|
+|_______________________________________________________________________________________________________________________________________________________________|
