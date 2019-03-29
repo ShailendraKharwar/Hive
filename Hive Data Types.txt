@@ -1,0 +1,38 @@
+_________________________________________________________________________________________________________________________________________________________
+|									Data Types in Hive								|
+|																			|
+|  Data types supported by Hive are classified into two type:												|
+|	1. Premitive type																|
+|	2. Complex type																	|
+|  Above mentioned data types are classified further:													|
+|	1. Premitive Type:																|
+|		a. Numeric Types															|
+|		   * TINYINT (1-byte signed integer, from -128 to 127)											|
+|		   * SMALLINT (2-byte signed integer, from -32,768 to 32,767)										|
+|		   * INT (4-byte signed integer, from -2,147,483,648 to 2,147,483,647)									|
+|                  * BIGINT (8-byte signed integer, from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807)					|
+| 		   * FLOAT (4-byte single precision floating point number)										|
+|                  * DOUBLE (8-byte double precision floating point number)										|
+| 		   * DECIMAL (Hive 0.13.0 introduced user definable precision and scale {DECIMAL(precision, scale)})					|
+|																			|
+|		b. Time/Date Type															|
+|		   * TIMESTAMP (YYYY-MM-DD HH:MM:SS.fffffffff & yyyy-mm-dd hh:mm:ss:ffffffffff)								|
+|		   * DATE (YYYY-MM-DD)															|
+|																			|
+|		c. String Types																|
+|		   * STRING																|
+|		   * VARCHAR																|
+|		   * CHAR																|
+|																			|
+|		d. Misc Type																|
+|		   * BOOLEAN (Yes/No)															|
+|		   * BINARY																|
+|																			|
+|	2. Complex Type																	|
+|		a. UNIONTYPE (UNIONTYPE<int, double, array<string>, struct<a:int,b:string>>)								|
+|		b. Arrays (ARRAY<data_type>)														|
+|		c. Structs (STRUCT<col_name : data_type [COMMENT col_comment], ...)									|
+|		d. Maps (MAP<primitive_type, data_type>)												|
+|_______________________________________________________________________________________________________________________________________________________|
+
+|
