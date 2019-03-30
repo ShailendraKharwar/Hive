@@ -1,0 +1,35 @@
+                                                    Hive Joins
+
+JOIN is a clause that is used for combining specific fields from two tables by using values common to each one.
+It is used to combine records from two or more tables in the database.
+
+There are different types of joins given as follows:
+
+1. JOIN: JOIN clause is used to combine and retrieve the records from multiple tables. JOIN is same as OUTER JOIN in SQL.
+	 A JOIN condition is to be raised using the primary keys and foreign keys of the tables.
+
+Syntax: SELECT col1_tab1, col2_tab1, col1_tab2 FROM table1 JOIN table2 ON condition(col1_tab1 = col1_tab2);
+
+2. LEFT OUTER JOIN: The HiveQL LEFT OUTER JOIN returns all the rows from the left table, even if there are no matches in
+	 the right table. This means, if the ON clause matches 0 (zero) records in the right table, the JOIN still returns
+	 a row in the result, but with NULL in each column from the right table.
+
+	 A LEFT JOIN returns all the values from the left table, plus the matched values from the right table, or NULL in
+	 case of no matching JOIN predicate.
+
+Syntax: SELECT col1_tab1, col2_tab1, col1_tab2 FROM table1 LEFT OUTER JOIN table2 ON condition(col1_tab1 = col1_tab2);
+
+3. RIGHT OUTER JOIN: The HiveQL RIGHT OUTER JOIN returns all the rows from the right table, even if there are no matches in
+	 the left table. If the ON clause matches 0 (zero) records in the left table, the JOIN still returns a row in the
+	 result, but with NULL in each column from the left table.
+
+	 A RIGHT JOIN returns all the values from the right table, plus the matched values from the left table, or NULL in 
+	 Case of no matching join predicate.
+
+Syntax: SELECT col1_tab1, col2_tab1, col1_tab2 FROM table1 RIGHT OUTER JOIN table2 ON condition(col1_tab1 = col1_tab2);
+
+4. FULL OUTER JOIN: The HiveQL FULL OUTER JOIN combines the records of both the left and the right outer tables that fulfil
+	 the JOIN condition. The joined table contains either all the records from both the tables, or fills in NULL values
+	 for missing matches on either side.
+
+Syntax: SELECT col1_tab1, col2_tab1, col1_tab2 FROM table1 FULL OUTER JOIN table2 ON condition(col1_tab1 = col1_tab2);
